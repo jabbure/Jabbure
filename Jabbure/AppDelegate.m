@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     NSLog(@"Current identifier: %@", [[NSBundle mainBundle] bundleIdentifier]);
-    [GMSServices provideAPIKey:@"AIzaSyDrVIKzH59ERtNhziBXudjU7KJJL9xJnfQ"];
+    [GMSServices provideAPIKey:@"AIzaSyAgneZtvTAOQeWjwngP3CT1LLtSo_tBqsQ"];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];

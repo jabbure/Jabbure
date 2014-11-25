@@ -27,7 +27,7 @@
 		F09BA34A1A1C152A0066E649 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09BA33E1A1C152A0066E649 /* OpenGLES.framework */; };
 		F09BA34B1A1C152A0066E649 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09BA33F1A1C152A0066E649 /* QuartzCore.framework */; };
 		F09BA34C1A1C152A0066E649 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09BA3401A1C152A0066E649 /* SystemConfiguration.framework */; };
-		F0C0882E1A1D68A300833859 /* LatitudeLongitude.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C0882D1A1D68A300833859 /* LatitudeLongitude.m */; };
+		F0C0882E1A1D68A300833859 /* JabburePlaces.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C0882D1A1D68A300833859 /* JabburePlaces.m */; };
 		F0C088351A1D6D3E00833859 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C088341A1D6D3E00833859 /* Place.m */; };
 		F0C088391A1D76E000833859 /* places.csv in Resources */ = {isa = PBXBuildFile; fileRef = F0C088381A1D76E000833859 /* places.csv */; };
 		F0C0883D1A1D79D000833859 /* parseCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C0883C1A1D79D000833859 /* parseCSV.m */; };
@@ -70,8 +70,8 @@
 		F09BA33E1A1C152A0066E649 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		F09BA33F1A1C152A0066E649 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F09BA3401A1C152A0066E649 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		F0C0882A1A1D682600833859 /* LatitudeLongitude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LatitudeLongitude.h; sourceTree = "<group>"; };
-		F0C0882D1A1D68A300833859 /* LatitudeLongitude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LatitudeLongitude.m; sourceTree = "<group>"; };
+		F0C0882A1A1D682600833859 /* JabburePlaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JabburePlaces.h; sourceTree = "<group>"; };
+		F0C0882D1A1D68A300833859 /* JabburePlaces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JabburePlaces.m; sourceTree = "<group>"; };
 		F0C088331A1D6D3E00833859 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
 		F0C088341A1D6D3E00833859 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
 		F0C088381A1D76E000833859 /* places.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = places.csv; sourceTree = "<group>"; };
@@ -190,8 +190,8 @@
 			children = (
 				F0C088331A1D6D3E00833859 /* Place.h */,
 				F0C088341A1D6D3E00833859 /* Place.m */,
-				F0C0882A1A1D682600833859 /* LatitudeLongitude.h */,
-				F0C0882D1A1D68A300833859 /* LatitudeLongitude.m */,
+				F0C0882A1A1D682600833859 /* JabburePlaces.h */,
+				F0C0882D1A1D68A300833859 /* JabburePlaces.m */,
 			);
 			name = Location;
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 				F0C088351A1D6D3E00833859 /* Place.m in Sources */,
 				F09BA3121A1C13F80066E649 /* ViewController.m in Sources */,
 				F0C0883D1A1D79D000833859 /* parseCSV.m in Sources */,
-				F0C0882E1A1D68A300833859 /* LatitudeLongitude.m in Sources */,
+				F0C0882E1A1D68A300833859 /* JabburePlaces.m in Sources */,
 				F09BA30F1A1C13F80066E649 /* AppDelegate.m in Sources */,
 				F09BA30C1A1C13F80066E649 /* main.m in Sources */,
 			);

@@ -13,4 +13,26 @@
 
 @implementation Place
 
+-(id)initPlace:(NSString *)name
+        street:(NSString *)street
+          city:(NSString *)city
+         state:(NSString *)state
+       zipcode:(int)zipcode
+      latitude:(float)latitude
+     longitude:(float)longitude
+
+{
+    if ( self = [super init] )
+    {
+        _name = name;
+        _street = street;
+        _city = city;
+        _state = state;
+        _zipcode = zipcode;
+        _latitude = latitude;
+        _longitude = longitude;
+    }
+    return self;
+}
+
 @end

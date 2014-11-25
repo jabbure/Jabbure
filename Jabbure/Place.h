@@ -14,9 +14,17 @@
 @property(strong) NSString *street;
 @property(strong) NSString *city;
 @property(strong) NSString *state;
-@property(assign) int *zipcode;
-@property(assign) float *latitude;
-@property(assign) float *longitude;
+@property(assign) int zipcode;
+@property(assign) float latitude;
+@property(assign) float longitude;
+
+-(id)initPlace:(NSString *)name
+        street:(NSString *)street
+          city:(NSString *)city
+         state:(NSString *)state
+       zipcode:(int)zipcode
+      latitude:(float)latitude
+     longitude:(float)longitude;
 
 @end
 

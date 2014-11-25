@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LatitudeLongitude : NSObject
+@interface JabburePlaces : NSObject
 
 + (NSArray *)places;
 

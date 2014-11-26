@@ -111,15 +111,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F09BA2FD1A1C13F80066E649 = {
+		F00B1B5D1A26809F00F11400 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F09BA3351A1C152A0066E649 /* AVFoundation.framework */,
-				F09BA3361A1C152A0066E649 /* CoreData.framework */,
-				F09BA3371A1C152A0066E649 /* CoreLocation.framework */,
-				F09BA3381A1C152A0066E649 /* CoreText.framework */,
-				F09BA3391A1C152A0066E649 /* GLKit.framework */,
-				F09BA33A1A1C152A0066E649 /* ImageIO.framework */,
 				F09BA33B1A1C152A0066E649 /* libc++.dylib */,
 				F09BA33C1A1C152A0066E649 /* libicucore.dylib */,
 				F09BA33D1A1C152A0066E649 /* libz.dylib */,
@@ -128,9 +122,23 @@
 				F09BA3401A1C152A0066E649 /* SystemConfiguration.framework */,
 				F09BA3331A1C14C10066E649 /* GoogleMaps.bundle */,
 				F09BA32F1A1C147A0066E649 /* GoogleMaps.framework */,
+				F09BA3351A1C152A0066E649 /* AVFoundation.framework */,
+				F09BA3361A1C152A0066E649 /* CoreData.framework */,
+				F09BA3371A1C152A0066E649 /* CoreLocation.framework */,
+				F09BA3381A1C152A0066E649 /* CoreText.framework */,
+				F09BA3391A1C152A0066E649 /* GLKit.framework */,
+				F09BA33A1A1C152A0066E649 /* ImageIO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F09BA2FD1A1C13F80066E649 = {
+			isa = PBXGroup;
+			children = (
 				F09BA3081A1C13F80066E649 /* Jabbure */,
 				F09BA3221A1C13F80066E649 /* JabbureTests */,
 				F09BA3071A1C13F80066E649 /* Products */,
+				F00B1B5D1A26809F00F11400 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

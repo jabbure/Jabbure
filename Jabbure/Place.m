@@ -13,7 +13,8 @@
 
 @implementation Place
 
--(id)initPlace:(NSString *)name
+-(id)initPlace:(NSString *)neighborhood
+          name:(NSString *)name
         street:(NSString *)street
           city:(NSString *)city
          state:(NSString *)state
@@ -24,13 +25,14 @@
 {
     if ( self = [super init] )
     {
-        _name = name;
-        _street = street;
-        _city = city;
-        _state = state;
-        _zipcode = zipcode;
-        _latitude = latitude;
-        _longitude = longitude;
+        self.neighborhood = neighborhood;
+        self.name = name;
+        self.street = street;
+        self.city = city;
+        self.state = state;
+        self.zipcode = zipcode;
+        self.latitude = latitude;
+        self.longitude = longitude;
     }
     return self;
 }

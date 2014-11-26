@@ -30,12 +30,13 @@
         {
             NSArray *placeArray = [csvContent objectAtIndex:i];
             Place *place = [[Place alloc] initPlace:[placeArray objectAtIndex:0]
-                                             street:[placeArray objectAtIndex:1]
-                                               city:[placeArray objectAtIndex:2]
-                                              state:[placeArray objectAtIndex:3]
-                                            zipcode:[[placeArray objectAtIndex:4] intValue]
-                                           latitude:[[placeArray objectAtIndex:5] floatValue]
-                                          longitude:[[placeArray objectAtIndex:6] floatValue]];
+                                               name:[placeArray objectAtIndex:1]
+                                             street:[placeArray objectAtIndex:2]
+                                               city:[placeArray objectAtIndex:3]
+                                              state:[placeArray objectAtIndex:4]
+                                            zipcode:[[placeArray objectAtIndex:5] intValue]
+                                           latitude:[[placeArray objectAtIndex:6] floatValue]
+                                          longitude:[[placeArray objectAtIndex:7] floatValue]];
             [places addObject:place];
         }
                 

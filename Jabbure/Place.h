@@ -10,6 +10,7 @@
 
 @interface Place : NSObject
 
+@property(strong) NSString *neighborhood;
 @property(strong) NSString *name;
 @property(strong) NSString *street;
 @property(strong) NSString *city;
@@ -18,7 +19,8 @@
 @property(assign) float latitude;
 @property(assign) float longitude;
 
--(id)initPlace:(NSString *)name
+-(id)initPlace:(NSString *)neighborhood
+          name:(NSString *)name
         street:(NSString *)street
           city:(NSString *)city
          state:(NSString *)state

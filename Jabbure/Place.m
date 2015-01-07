@@ -37,4 +37,9 @@
     return self;
 }
 
+-(NSString *)address
+{
+   return [NSString stringWithFormat:@"%@, %@, %@, %d", self.street, self.city, self.state, self.zipcode];
+}
+
 @end

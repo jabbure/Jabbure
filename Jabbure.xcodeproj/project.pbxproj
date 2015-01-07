@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F063B88A1A5CB800006DBF3A /* InfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F063B8891A5CB800006DBF3A /* InfoWindow.xib */; };
+		F063B88D1A5CBFC1006DBF3A /* CustomInfoWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F063B88C1A5CBFC1006DBF3A /* CustomInfoWindow.m */; };
 		F09BA30C1A1C13F80066E649 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F09BA30B1A1C13F80066E649 /* main.m */; };
 		F09BA30F1A1C13F80066E649 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F09BA30E1A1C13F80066E649 /* AppDelegate.m */; };
 		F09BA3121A1C13F80066E649 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09BA3111A1C13F80066E649 /* ViewController.m */; };
@@ -44,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F063B8891A5CB800006DBF3A /* InfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoWindow.xib; sourceTree = "<group>"; };
+		F063B88B1A5CBFC1006DBF3A /* CustomInfoWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInfoWindow.h; sourceTree = "<group>"; };
+		F063B88C1A5CBFC1006DBF3A /* CustomInfoWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInfoWindow.m; sourceTree = "<group>"; };
 		F09BA3061A1C13F80066E649 /* Jabbure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jabbure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09BA30A1A1C13F80066E649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F09BA30B1A1C13F80066E649 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,6 +137,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F063B8851A5CB686006DBF3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F063B8891A5CB800006DBF3A /* InfoWindow.xib */,
+				F063B88B1A5CBFC1006DBF3A /* CustomInfoWindow.h */,
+				F063B88C1A5CBFC1006DBF3A /* CustomInfoWindow.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		F09BA2FD1A1C13F80066E649 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +172,7 @@
 				F09BA30D1A1C13F80066E649 /* AppDelegate.h */,
 				F09BA30E1A1C13F80066E649 /* AppDelegate.m */,
 				F0C088301A1D6C8C00833859 /* Controller */,
+				F063B8851A5CB686006DBF3A /* Model */,
 				F0C0882F1A1D6C8100833859 /* Location */,
 				F09BA3161A1C13F80066E649 /* Images.xcassets */,
 				F09BA3181A1C13F80066E649 /* LaunchScreen.xib */,
@@ -304,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F09BA31A1A1C13F80066E649 /* LaunchScreen.xib in Resources */,
+				F063B88A1A5CB800006DBF3A /* InfoWindow.xib in Resources */,
 				F09BA3171A1C13F80066E649 /* Images.xcassets in Resources */,
 				F09BA3341A1C14C20066E649 /* GoogleMaps.bundle in Resources */,
 				F0C088391A1D76E000833859 /* places.csv in Resources */,
@@ -326,6 +343,7 @@
 			files = (
 				F0C088351A1D6D3E00833859 /* Place.m in Sources */,
 				F09BA3121A1C13F80066E649 /* ViewController.m in Sources */,
+				F063B88D1A5CBFC1006DBF3A /* CustomInfoWindow.m in Sources */,
 				F0C0883D1A1D79D000833859 /* parseCSV.m in Sources */,
 				F0C0882E1A1D68A300833859 /* JabburePlaces.m in Sources */,
 				F09BA30F1A1C13F80066E649 /* AppDelegate.m in Sources */,

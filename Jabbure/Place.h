@@ -28,5 +28,7 @@
       latitude:(float)latitude
      longitude:(float)longitude;
 
+-(NSString *)address;
+
 @end
 

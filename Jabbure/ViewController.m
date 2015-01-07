@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "JabburePlaces.h"
 #import "Place.h"
+#import "CustomInfoWindow.h"
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface ViewController ()
@@ -23,6 +24,7 @@
                                                             longitude:-76.593221
                                                                  zoom:18];
     GMSMapView *mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    mapView_.delegate = self;
     mapView_.myLocationEnabled = YES;
     mapView_.indoorEnabled = YES;
     mapView_.settings.compassButton = YES;
@@ -30,14 +32,29 @@
     self.view = mapView_;
     
     // create markers on the map
+    int counter = 0;
     for (Place *place in [JabburePlaces places])
     {
         GMSMarker *marker = [[GMSMarker alloc] init];
         marker.position = CLLocationCoordinate2DMake(place.latitude, place.longitude);
-        marker.title = place.name;
-        marker.snippet = [NSString stringWithFormat:@"%@, %@, %@, %d", place.street, place.city, place.state, place.zipcode];
+        marker.title = [NSString stringWithFormat:@"%d", counter];
         marker.map = mapView_;
+        
+        counter++;
     }
+}
+
+- (UIView *) mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker
+{
+    CustomInfoWindow *infoWindow = [[[NSBundle mainBundle] loadNibNamed:@"InfoWindow" owner:self options:nil] objectAtIndex:0];
+    
+    Place *place = [[JabburePlaces places] objectAtIndex:[marker.title intValue]];
+    
+    infoWindow.name.text = place.name;
+    infoWindow.neighborhood.text = place.neighborhood;
+    infoWindow.address.text = [place address];
+    
+    return infoWindow;
 }
 
 - (void)didReceiveMemoryWarning {

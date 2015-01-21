@@ -20,16 +20,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:39.283145
-                                                            longitude:-76.593221
-                                                                 zoom:18];
-    GMSMapView *mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView_.delegate = self;
-    mapView_.myLocationEnabled = YES;
-    mapView_.indoorEnabled = YES;
-    mapView_.settings.compassButton = YES;
-    mapView_.settings.myLocationButton = YES;
-    self.view = mapView_;
+    [self createMapView];
+}
+
+- (void)createMapView
+{
+    self.mapView = [GMSMapView mapWithFrame:CGRectZero camera:[GMSCameraPosition cameraWithLatitude:39.283145 longitude:-76.593221 zoom:18]];
+    self.mapView.delegate = self;
+    self.mapView.myLocationEnabled = YES;
+    self.mapView.indoorEnabled = YES;
+    self.mapView.settings.compassButton = YES;
+    self.mapView.settings.myLocationButton = YES;
+    self.view = self.mapView;
     
     // create markers on the map
     int counter = 0;
@@ -38,7 +40,7 @@
         GMSMarker *marker = [[GMSMarker alloc] init];
         marker.position = CLLocationCoordinate2DMake(place.latitude, place.longitude);
         marker.title = [NSString stringWithFormat:@"%d", counter];
-        marker.map = mapView_;
+        marker.map = self.mapView;
         
         counter++;
     }

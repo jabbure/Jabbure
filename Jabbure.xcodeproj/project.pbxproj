@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		F063B88A1A5CB800006DBF3A /* InfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F063B8891A5CB800006DBF3A /* InfoWindow.xib */; };
 		F063B88D1A5CBFC1006DBF3A /* CustomInfoWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F063B88C1A5CBFC1006DBF3A /* CustomInfoWindow.m */; };
+		F063B8931A65BE76006DBF3A /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F063B8921A65BE76006DBF3A /* Images-2.xcassets */; };
+		F063B8961A65C332006DBF3A /* app_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = F063B8951A65C332006DBF3A /* app_splash.png */; };
 		F09BA30C1A1C13F80066E649 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F09BA30B1A1C13F80066E649 /* main.m */; };
 		F09BA30F1A1C13F80066E649 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F09BA30E1A1C13F80066E649 /* AppDelegate.m */; };
 		F09BA3121A1C13F80066E649 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09BA3111A1C13F80066E649 /* ViewController.m */; };
-		F09BA3171A1C13F80066E649 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F09BA3161A1C13F80066E649 /* Images.xcassets */; };
-		F09BA31A1A1C13F80066E649 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F09BA3181A1C13F80066E649 /* LaunchScreen.xib */; };
 		F09BA3261A1C13F80066E649 /* JabbureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F09BA3251A1C13F80066E649 /* JabbureTests.m */; };
 		F09BA3301A1C147A0066E649 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09BA32F1A1C147A0066E649 /* GoogleMaps.framework */; };
 		F09BA3341A1C14C20066E649 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F09BA3331A1C14C10066E649 /* GoogleMaps.bundle */; };
@@ -49,6 +49,8 @@
 		F063B8891A5CB800006DBF3A /* InfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoWindow.xib; sourceTree = "<group>"; };
 		F063B88B1A5CBFC1006DBF3A /* CustomInfoWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInfoWindow.h; sourceTree = "<group>"; };
 		F063B88C1A5CBFC1006DBF3A /* CustomInfoWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInfoWindow.m; sourceTree = "<group>"; };
+		F063B8921A65BE76006DBF3A /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		F063B8951A65C332006DBF3A /* app_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_splash.png; path = Resources/app_splash.png; sourceTree = "<group>"; };
 		F09BA3061A1C13F80066E649 /* Jabbure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jabbure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09BA30A1A1C13F80066E649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F09BA30B1A1C13F80066E649 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,8 +58,6 @@
 		F09BA30E1A1C13F80066E649 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F09BA3101A1C13F80066E649 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F09BA3111A1C13F80066E649 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F09BA3161A1C13F80066E649 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F09BA3191A1C13F80066E649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F09BA31F1A1C13F80066E649 /* JabbureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JabbureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09BA3241A1C13F80066E649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F09BA3251A1C13F80066E649 /* JabbureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JabbureTests.m; sourceTree = "<group>"; };
@@ -147,6 +147,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		F063B8941A65C2DD006DBF3A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F063B8951A65C332006DBF3A /* app_splash.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		F09BA2FD1A1C13F80066E649 = {
 			isa = PBXGroup;
 			children = (
@@ -174,11 +182,11 @@
 				F0C088301A1D6C8C00833859 /* Controller */,
 				F063B8851A5CB686006DBF3A /* Model */,
 				F0C0882F1A1D6C8100833859 /* Location */,
-				F09BA3161A1C13F80066E649 /* Images.xcassets */,
-				F09BA3181A1C13F80066E649 /* LaunchScreen.xib */,
 				F0C0883A1A1D79BD00833859 /* External */,
 				F09BA3091A1C13F80066E649 /* Supporting Files */,
 				F0C088381A1D76E000833859 /* places.csv */,
+				F063B8941A65C2DD006DBF3A /* Resources */,
+				F063B8921A65BE76006DBF3A /* Images-2.xcassets */,
 			);
 			path = Jabbure;
 			sourceTree = "<group>";
@@ -319,9 +327,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F09BA31A1A1C13F80066E649 /* LaunchScreen.xib in Resources */,
+				F063B8931A65BE76006DBF3A /* Images-2.xcassets in Resources */,
+				F063B8961A65C332006DBF3A /* app_splash.png in Resources */,
 				F063B88A1A5CB800006DBF3A /* InfoWindow.xib in Resources */,
-				F09BA3171A1C13F80066E649 /* Images.xcassets in Resources */,
 				F09BA3341A1C14C20066E649 /* GoogleMaps.bundle in Resources */,
 				F0C088391A1D76E000833859 /* places.csv in Resources */,
 			);
@@ -368,17 +376,6 @@
 			targetProxy = F09BA3201A1C13F80066E649 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F09BA3181A1C13F80066E649 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F09BA3191A1C13F80066E649 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F09BA3271A1C13F80066E649 /* Debug */ = {
@@ -463,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -482,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

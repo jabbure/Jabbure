@@ -11,5 +11,7 @@
 
 @interface ViewController : UIViewController <GMSMapViewDelegate>
 
+@property (strong) GMSMapView *mapView;
+
 @end
 

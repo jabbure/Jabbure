@@ -23,10 +23,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *slider2LowIcon;
 @property (weak, nonatomic) IBOutlet UIImageView *slider2HighIcon;
 
-@property (weak, nonatomic) IBOutlet UISlider *slider3;
-@property (weak, nonatomic) IBOutlet UIImageView *slider3LowIcon;
-@property (weak, nonatomic) IBOutlet UIImageView *slider3HighIcon;
-
 @property (weak, nonatomic) IBOutlet UIButton *checkIn;
 @property (weak, nonatomic) IBOutlet UIButton *chat;
 

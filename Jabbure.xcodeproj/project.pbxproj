@@ -137,14 +137,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F063B8851A5CB686006DBF3A /* Model */ = {
+		F063B8851A5CB686006DBF3A /* Info Window */ = {
 			isa = PBXGroup;
 			children = (
 				F063B8891A5CB800006DBF3A /* InfoWindow.xib */,
 				F063B88B1A5CBFC1006DBF3A /* CustomInfoWindow.h */,
 				F063B88C1A5CBFC1006DBF3A /* CustomInfoWindow.m */,
 			);
-			name = Model;
+			name = "Info Window";
 			sourceTree = "<group>";
 		};
 		F063B8941A65C2DD006DBF3A /* Resources */ = {
@@ -180,7 +180,7 @@
 				F09BA30D1A1C13F80066E649 /* AppDelegate.h */,
 				F09BA30E1A1C13F80066E649 /* AppDelegate.m */,
 				F0C088301A1D6C8C00833859 /* Controller */,
-				F063B8851A5CB686006DBF3A /* Model */,
+				F063B8851A5CB686006DBF3A /* Info Window */,
 				F0C0882F1A1D6C8100833859 /* Location */,
 				F0C0883A1A1D79BD00833859 /* External */,
 				F09BA3091A1C13F80066E649 /* Supporting Files */,

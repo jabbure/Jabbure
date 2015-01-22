@@ -21,7 +21,15 @@
 {
     [super viewDidLoad];
     [self createMapView];
+    [self createSearchBar];
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+# pragma create views
 
 - (void)createMapView
 {
@@ -46,6 +54,16 @@
     }
 }
 
+- (void)createSearchBar
+{
+    self.searchBar = [[UISearchBar alloc] init];
+    self.searchBar.delegate = self;
+    [self.searchBar sizeToFit];
+    self.navigationItem.titleView = self.searchBar;
+}
+
+#pragma GMSMapViewDelegate methods
+
 - (UIView *) mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker
 {
     CustomInfoWindow *infoWindow = [[[NSBundle mainBundle] loadNibNamed:@"InfoWindow" owner:self options:nil] objectAtIndex:0];
@@ -59,9 +77,28 @@
     return infoWindow;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    [self.searchBar resignFirstResponder];
+}
+
+- (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
+{
+    [self.searchBar resignFirstResponder];    
+    return NO;
+}
+
+#pragma UISearchBarDelegate methods
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSLog(@"Searching for: %@", searchBar.text);
+    [self.searchBar resignFirstResponder];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [self.searchBar resignFirstResponder];
 }
 
 @end

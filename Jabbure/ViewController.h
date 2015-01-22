@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <GoogleMaps/GoogleMaps.h>
 
-@interface ViewController : UIViewController <GMSMapViewDelegate>
+@interface ViewController : UIViewController <GMSMapViewDelegate, UISearchBarDelegate>
 
 @property (strong) GMSMapView *mapView;
+@property (strong) UISearchBar *searchBar;
 
 @end
 

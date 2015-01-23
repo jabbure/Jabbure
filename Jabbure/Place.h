@@ -18,6 +18,7 @@
 @property(assign) int zipcode;
 @property(assign) float latitude;
 @property(assign) float longitude;
+@property(strong) NSString *searchString;
 
 -(id)initPlace:(NSString *)neighborhood
           name:(NSString *)name

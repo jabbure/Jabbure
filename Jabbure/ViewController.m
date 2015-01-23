@@ -22,6 +22,8 @@
     [super viewDidLoad];
     [self createMapView];
     [self createSearchBar];
+    
+    [self refreshMapView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,18 +42,6 @@
     self.mapView.settings.compassButton = YES;
     self.mapView.settings.myLocationButton = YES;
     self.view = self.mapView;
-    
-    // create markers on the map
-    int counter = 0;
-    for (Place *place in [JabburePlaces places])
-    {
-        GMSMarker *marker = [[GMSMarker alloc] init];
-        marker.position = CLLocationCoordinate2DMake(place.latitude, place.longitude);
-        marker.title = [NSString stringWithFormat:@"%d", counter];
-        marker.map = self.mapView;
-        
-        counter++;
-    }
 }
 
 - (void)createSearchBar
@@ -61,6 +51,28 @@
     [self.searchBar sizeToFit];
     self.navigationItem.titleView = self.searchBar;
 }
+
+#pragma refresh functions
+- (void)refreshMapView
+{
+    [self.mapView clear];
+    
+    // create markers on the map
+    int counter = 0;
+    for (Place *place in [JabburePlaces places])
+    {
+        if([self.searchBar.text isEqualToString:@""] || [place.searchString rangeOfString:self.searchBar.text options:NSCaseInsensitiveSearch].location != NSNotFound)
+        {
+            GMSMarker *marker = [[GMSMarker alloc] init];
+            marker.position = CLLocationCoordinate2DMake(place.latitude, place.longitude);
+            marker.title = [NSString stringWithFormat:@"%d", counter];
+            marker.map = self.mapView;
+        }
+        
+        counter++;
+    }
+}
+
 
 #pragma GMSMapViewDelegate methods
 
@@ -79,12 +91,12 @@
 
 - (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
 {
-    [self.searchBar resignFirstResponder];
+    [self resignSearchBarAndRefreshMapView:nil];
 }
 
 - (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
 {
-    [self.searchBar resignFirstResponder];    
+    [self resignSearchBarAndRefreshMapView:nil];
     return NO;
 }
 
@@ -92,13 +104,20 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    NSLog(@"Searching for: %@", searchBar.text);
-    [self.searchBar resignFirstResponder];
+    [self resignSearchBarAndRefreshMapView:nil];
 }
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    if ([searchText length] == 0) {
+        [self performSelector:@selector(resignSearchBarAndRefreshMapView:) withObject:nil afterDelay:0];
+    }
+}
+#pragma helper functions
+
+- (void)resignSearchBarAndRefreshMapView:(UISearchBar *)searchBar
 {
     [self.searchBar resignFirstResponder];
+    [self refreshMapView];
 }
 
 @end

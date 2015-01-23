@@ -33,6 +33,7 @@
         self.zipcode = zipcode;
         self.latitude = latitude;
         self.longitude = longitude;
+        self.searchString = [NSString stringWithFormat:@"%@%@%@%@%@%d", self.neighborhood, self.name, self.street, self.city, self.state, self.zipcode];
     }
     return self;
 }

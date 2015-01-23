@@ -105,12 +105,6 @@
     [self resignSearchBarAndRefreshMapView];
 }
 
-- (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
-{
-    [self resignSearchBarAndRefreshMapView];
-    return NO;
-}
-
 #pragma UISearchBarDelegate methods
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar

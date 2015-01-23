@@ -15,13 +15,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *address;
 @property (weak, nonatomic) IBOutlet UIImageView *navigateIcon;
 
-@property (weak, nonatomic) IBOutlet UISlider *slider1;
-@property (weak, nonatomic) IBOutlet UIImageView *slider1LowIcon;
-@property (weak, nonatomic) IBOutlet UIImageView *slider1HighIcon;
+@property (weak, nonatomic) IBOutlet UISlider *guyGirlSlider;
+@property (weak, nonatomic) IBOutlet UIImageView *guyGirlSliderLowIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *guyGirlSliderHighIcon;
 
-@property (weak, nonatomic) IBOutlet UISlider *slider2;
-@property (weak, nonatomic) IBOutlet UIImageView *slider2LowIcon;
-@property (weak, nonatomic) IBOutlet UIImageView *slider2HighIcon;
+@property (weak, nonatomic) IBOutlet UISlider *ratingSlider;
+@property (weak, nonatomic) IBOutlet UIImageView *ratingSliderLowIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *ratingSliderHighIcon;
 
 @property (weak, nonatomic) IBOutlet UIButton *checkIn;
 @property (weak, nonatomic) IBOutlet UIButton *chat;

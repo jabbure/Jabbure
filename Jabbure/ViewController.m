@@ -10,6 +10,7 @@
 #import "JabburePlaces.h"
 #import "Place.h"
 #import "CustomInfoWindow.h"
+#import "CustomFilterWindow.h"
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface ViewController ()
@@ -22,6 +23,7 @@
     [super viewDidLoad];
     [self createMapView];
     [self createSearchBar];
+    [self createSliders];
     
     [self refreshMapView];
 }
@@ -35,7 +37,7 @@
 
 - (void)createMapView
 {
-    self.mapView = [GMSMapView mapWithFrame:CGRectZero camera:[GMSCameraPosition cameraWithLatitude:39.283145 longitude:-76.593221 zoom:18]];
+    self.mapView = [GMSMapView mapWithFrame:self.view.bounds camera:[GMSCameraPosition cameraWithLatitude:39.283145 longitude:-76.593221 zoom:18]];
     self.mapView.delegate = self;
     self.mapView.myLocationEnabled = YES;
     self.mapView.indoorEnabled = YES;
@@ -50,6 +52,15 @@
     self.searchBar.delegate = self;
     [self.searchBar sizeToFit];
     self.navigationItem.titleView = self.searchBar;
+}
+
+- (void)createSliders
+{
+    CustomFilterWindow *filterWindow = [[[NSBundle mainBundle] loadNibNamed:@"FilterWindow" owner:self options:nil] objectAtIndex:0];
+    filterWindow.frame = CGRectMake(0, self.view.frame.size.height-filterWindow.frame.size.height, filterWindow.frame.size.width, filterWindow.frame.size.height);
+    
+    
+    [self.view insertSubview:filterWindow aboveSubview:self.mapView];
 }
 
 #pragma refresh functions

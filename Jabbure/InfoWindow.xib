@@ -71,15 +71,15 @@
                 <outlet property="address" destination="idk-0n-Y6i" id="z1F-8L-0T8"/>
                 <outlet property="chat" destination="bIw-E1-dT9" id="u9d-Zj-DG1"/>
                 <outlet property="checkIn" destination="0Mc-6C-cd8" id="WUY-xv-eeK"/>
+                <outlet property="guyGirlSlider" destination="Iqw-nT-yfk" id="lXx-Z1-3cN"/>
+                <outlet property="guyGirlSliderHighIcon" destination="iaC-nT-wSM" id="ZpM-1N-qww"/>
+                <outlet property="guyGirlSliderLowIcon" destination="TJo-i2-INn" id="Uat-uy-vw2"/>
                 <outlet property="name" destination="NA8-kd-cFH" id="uHb-T2-eyE"/>
                 <outlet property="navigateIcon" destination="9t2-tN-Bai" id="iGI-sa-jb5"/>
                 <outlet property="neighborhood" destination="b1X-cK-MoP" id="u4a-Xm-jWR"/>
-                <outlet property="slider1" destination="Iqw-nT-yfk" id="rNH-3G-Sgu"/>
-                <outlet property="slider1HighIcon" destination="iaC-nT-wSM" id="Zrt-qt-Jo2"/>
-                <outlet property="slider1LowIcon" destination="TJo-i2-INn" id="hpr-Uu-IF7"/>
-                <outlet property="slider2" destination="BWb-ok-flm" id="QZC-gM-Rih"/>
-                <outlet property="slider2HighIcon" destination="gwE-hN-5w2" id="OaF-h8-0tf"/>
-                <outlet property="slider2LowIcon" destination="zfG-gq-yuq" id="5ru-5U-2Vz"/>
+                <outlet property="ratingSlider" destination="BWb-ok-flm" id="iFF-Fa-szD"/>
+                <outlet property="ratingSliderHighIcon" destination="gwE-hN-5w2" id="Fop-PO-cFc"/>
+                <outlet property="ratingSliderLowIcon" destination="zfG-gq-yuq" id="aEi-9A-Uer"/>
             </connections>
             <point key="canvasLocation" x="438" y="233"/>
         </view>

@@ -91,12 +91,12 @@
 
 - (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
 {
-    [self resignSearchBarAndRefreshMapView:nil];
+    [self resignSearchBarAndRefreshMapView];
 }
 
 - (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
 {
-    [self resignSearchBarAndRefreshMapView:nil];
+    [self resignSearchBarAndRefreshMapView];
     return NO;
 }
 
@@ -104,17 +104,12 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    [self resignSearchBarAndRefreshMapView:nil];
+    [self resignSearchBarAndRefreshMapView];
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    if ([searchText length] == 0) {
-        [self performSelector:@selector(resignSearchBarAndRefreshMapView:) withObject:nil afterDelay:0];
-    }
-}
 #pragma helper functions
 
-- (void)resignSearchBarAndRefreshMapView:(UISearchBar *)searchBar
+- (void)resignSearchBarAndRefreshMapView
 {
     [self.searchBar resignFirstResponder];
     [self refreshMapView];
